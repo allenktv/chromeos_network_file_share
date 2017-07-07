@@ -231,7 +231,7 @@ function getManagedShares() {
     if (!isEmpty(data) && data.hasOwnProperty("ManagedShares")) {
       log.info("Found managed shares: " + JSON.stringify(data));
       var shareField = document.getElementById('shareDropdown');
-      var shares = data.ManagedShares.items;
+      var shares = data.ManagedShares;
       if (shares.length > 0) {
         var defaultShare = shares[0];
         shareField.setManagedShare(defaultShare);

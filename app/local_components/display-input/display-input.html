@@ -46,6 +46,18 @@
           this.push('pathsList', share);
         },
 
+        setManagedShare: function(share) {
+//          var shareItem = {icon: "../../icon_domain.png", "path": share};
+//          if (isDefault) {
+          this.unshift('pathsList', share);
+          this.dropdownMenu.value = share;
+          this.notifyDisplayField(share);
+//          } else {
+//            this.push('pathsList', shareItem);
+//          }
+//        },
+        },
+
         inputChanged: function (event) {
           var trimmedInput = event.detail.value.trim();
           this.notifyDisplayField(trimmedInput);
