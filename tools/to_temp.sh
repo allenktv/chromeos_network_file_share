@@ -27,6 +27,7 @@ echo From: $SOURCE_PATH
 echo To  : $LOCAL_OUTPUT_PATH
 
 pushd $SOURCE_PATH
+  find -name '*.o' -delete
   echo Zippppping
   zip -r $LOCAL_OUTPUT_PATH .
 popd
